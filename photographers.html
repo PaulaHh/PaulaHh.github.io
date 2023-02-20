@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Famous photographers</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/7333741815.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./photographers.css">
+</head>
+<body>
+  <!-- Modal for comments -->
+  <div class="modal fade" id="comment-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="comment-modal-title">Comments</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <textarea id="comment-text" placeholder="Write your thoughts..."></textarea>
+          <div id="comment-section"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button id="post-button" type="button" class="btn btn-primary" onclick="addComment()">Post comment</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal for number of bookmarks -->
+  <div id="bookmark-modal" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <p style="text-align: center;" id="number-of-bookmarks"></p>
+      </div>
+    </div>
+  </div>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Wildlife Photography</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="photographers.html">Famous Photographers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="bookmarks.html">Saved articles</a>
+          </li>
+        </ul>
+      </div>
+  </nav>
+  <br>
+  <div style="margin-left:5%; margin-right:5%; margin-bottom:2%">
+    <!-- Title -->
+    <header class="center" style="margin-top:10%">
+        <h2>Famous Wildlife Photographers</h2>
+    </header>
+    <!-- Table containing short intro -->
+    <section>
+        <table class="info" style="text-indent: -1.5em;">
+            <tr>
+                <td>The three basic elements of a great image: the right light, the right composition, and the right moment.</td>
+            </tr>
+            <tr>
+                <td>To better understand photos and what makes a photographer great, we should analyse the work of the most appreciated photographers.</td>
+            </tr>
+            <tr>
+                <td>Let's dig into some astonishing work of art!</td>
+            </tr>
+        </table>
+    </section>
+    <br>
+    <div class="card-deck">
+      <div class="card">
+        <img class="card-img-top" src="https://scontent-lhr8-2.xx.fbcdn.net/v/t1.6435-9/73346541_930288857340858_8464945945560219648_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=730e14&_nc_ohc=kxrJ0z-NOXoAX9Zk3Ua&_nc_ht=scontent-lhr8-2.xx&oh=00_AfC41PMWO7LZowlYw6fCzZTim9HWk8ec7VepGlPxu_B-KQ&oe=63FF11D5" alt="Cougar looking at camera">
+        <div class="card-body">
+          <h5 class="card-title">Frans Lanting</h5>
+          <p class="card-text">For more than twenty years, he has photographically documented flora and fauna, as well as the relationship between humans and nature in settings from Antarctica to Amazon.
+              Lanting has been presented with several awards as a conservationist and a photographer.</p>
+              <p class="card-text"><small class="text-muted">Cougar looking at camera</small></p>
+        </div>
+        <!-- Action bar -->
+        <div data-id="frans" id="actionBar" style="text-align: left; background-color: #f0f0f0;">
+          <!-- "Like" button -->
+          <span id="likeButton" class="fa-regular fa-heart" onclick="likeItem(this)"></span>
+          <!-- "Comment" button -->
+          <span id="commentButton" class="fa-regular fa-comment" onclick="showCommentModal(this)"></span>
+          <!-- Comment count -->
+          <span id="commentCount"></span>
+          <!-- "Save for later" button -->
+          <span id="saveButton" class="fa-regular fa-bookmark" onclick="markSavedItem(this)"></span>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" src="https://iso.500px.com/wp-content/uploads/2016/03/stock-photo-82076559-1.jpg" alt="Family of cheetahs">
+        <div class="card-body">
+          <h5 class="card-title">Marina Cano</h5>
+          <p class="card-text">Marina Cano is a Spanish photographer with over 25 years of experience.
+          In love with the African continent and committed to its conservation, she collaborates with different associations that protect and preserve threatened species.
+          </p>
+          <p class="card-text"><small class="text-muted">Family of cheetahs</small></p>
+        </div>
+        <div data-id="marina" id="actionBar" style="text-align: left; background-color: #f0f0f0;">
+          <!-- "Like" button -->
+          <span id="likeButton" class="fa-regular fa-heart" onclick="likeItem(this)"></span>
+          <!-- "Comment" button -->
+          <span id="commentButton" class="fa-regular fa-comment" onclick="showCommentModal(this)"></span>
+          <!-- Comment count -->
+          <span id="commentCount"></span>
+          <!-- "Save for later" button -->
+          <span id="saveButton" class="fa-regular fa-bookmark" onclick="markSavedItem(this)"></span>
+        </div>
+      </div>
+  </div>
+  <br>
+  <div class="card-deck">
+      <div class="card">
+          <img class="card-img-top" src="https://expertphotography.b-cdn.net/wp-content/uploads/2020/06/15-Wildlife-Photographers-3-ZhinongXi.jpg" alt="Couple of snub-nosed monkeys">
+          <div class="card-body">
+              <h5 class="card-title">Marsel van Oosten</h5>
+              <p class="card-text">Marsel van Oosten's work brings awareness to the animal's extraordinary beauty, but also to their endangerment.
+                The photos remind us of how fragile the magnificence of wildlife can be, which is why the work earned him the Grand Title Wildlife Photographer of the Year award.</p>
+              <p class="card-text"><small class="text-muted">Couple of snub-nosed monkeys</small></p>
+          </div>
+          <div data-id="marsel" id="actionBar" style="text-align: left; background-color: #f0f0f0;">
+            <!-- "Like" button -->
+            <span id="likeButton" class="fa-regular fa-heart" onclick="likeItem(this)"></span>
+            <!-- "Comment" button -->
+            <span id="commentButton" class="fa-regular fa-comment" onclick="showCommentModal(this)"></span>
+            <!-- Comment count -->
+            <span id="commentCount"></span>
+            <!-- "Save for later" button -->
+            <span id="saveButton" class="fa-regular fa-bookmark" onclick="markSavedItem(this)"></span>
+          </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" src="https://expertphotography.b-cdn.net/wp-content/uploads/2020/06/15-Wildlife-Photographers-4-Eszterhas.jpg" alt="Bat-eared fox with its pups">
+        <div class="card-body">
+          <h5 class="card-title">Suzi Eszterhas</h5>
+          <p class="card-text">Suzi Eszterhas is an award-winning wildlife photographer best known for her work documenting newborn animals and family life in the wild.
+          Suzi's unique ability to earn the trust of her subject leads to touching imagery.</p>
+          <p class="card-text"><small class="text-muted">Bat-eared fox with its pups</small></p>
+        </div>
+        <div data-id="suzi" id="actionBar" style="text-align: left; background-color: #f0f0f0;">
+          <!-- "Like" button -->
+          <span id="likeButton" class="fa-regular fa-heart" onclick="likeItem(this)"></span>
+          <!-- "Comment" button -->
+          <span id="commentButton" class="fa-regular fa-comment" onclick="showCommentModal(this)"></span>
+          <!-- Comment count -->
+          <span id="commentCount"></span>
+          <!-- "Save for later" button -->
+          <span id="saveButton" class="fa-regular fa-bookmark" onclick="markSavedItem(this)"></span>
+        </div>
+      </div>
+  </div>
+  <br>
+  <div class="card-deck">
+      <div class="card">
+          <img class="card-img-top" src="https://bushwarriors.files.wordpress.com/2011/04/sandeshkadur_caracara_birds-credit.jpg?w=768&h=511" alt="Caraca bird spreading its wings">
+          <div class="card-body">
+              <h5 class="card-title">Sandesh Kadur</h5>
+              <p class="card-text">Sandesh Kadur has a passion for visual imagery and has made his mark as both a wildlife photographer and documentary filmmaker.
+                He is known known for his contributions to BBC Planet Earth II.</p>
+                <p class="card-text"><small class="text-muted">Caraca bird spreading its wings</small></p>
+          </div>
+          <div data-id="sandesh" id="actionBar" style="text-align: left; background-color: #f0f0f0;">
+            <!-- "Like" button -->
+            <span id="likeButton" class="fa-regular fa-heart" onclick="likeItem(this)"></span>
+            <!-- "Comment" button -->
+            <span id="commentButton" class="fa-regular fa-comment" onclick="showCommentModal(this)"></span>
+            <!-- Comment count -->
+            <span id="commentCount"></span>
+            <!-- "Save for later" button -->
+            <span id="saveButton" class="fa-regular fa-bookmark" onclick="markSavedItem(this)"></span>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="https://expertphotography.b-cdn.net/wp-content/uploads/2020/06/15-Wildlife-Photographers-6-Groo.jpg" alt="Sleeping american avocet">
+          <div class="card-body">
+              <h5 class="card-title">Melissa Groo</h5>
+              <p class="card-text">Melissa Groo is a wildlife photographer, writer, and conservationist with a passion for educating people about the marvels of the natural world.
+                It is her mission to raise awareness and change minds about not only the extrinsic beauty of animals, but also their intrinsic worth.</p>
+              <p class="card-text"><small class="text-muted">Sleeping american avocet</small></p> 
+          </div>
+          <div data-id="melissa" id="actionBar" style="text-align: left; background-color: #f0f0f0;">
+            <!-- "Like" button -->
+            <span id="likeButton" class="fa-regular fa-heart" onclick="likeItem(this)"></span>
+            <!-- "Comment" button -->
+            <span id="commentButton" class="fa-regular fa-comment" onclick="showCommentModal(this)"></span>
+            <!-- Comment count -->
+            <span id="commentCount"></span>
+            <!-- "Save for later" button -->
+            <span id="saveButton" class="fa-regular fa-bookmark" onclick="markSavedItem(this)"></span>
+          </div>
+        </div>
+  </div>
+  <br>
+  <div class="card-deck">
+      <div class="card">
+        <img class="card-img-top" src="https://tinmanlee.com/wp-content/uploads/2017/01/burrowing_owl_purple1.jpg" alt="Owl at dawn">
+        <div class="card-body">
+          <h5 class="card-title">Tin Man Lee</h5>
+          <p class="card-text">Tin Man Lee is a nature and wildlife photographer who has been deeply in love with wild animals and nature since he was a child.
+          Born in Hong Kong and based in Agoura Hills, CA, Tin Man has a PhD in Biomedical Engineering, specializing in image recovery. </p>
+          <p class="card-text"><small class="text-muted">Owl at dawn</small></p>
+        </div>
+        <div data-id="tin" id="actionBar" style="text-align: left; background-color: #f0f0f0;">
+          <!-- "Like" button -->
+          <span id="likeButton" class="fa-regular fa-heart" onclick="likeItem(this)"></span>
+          <!-- "Comment" button -->
+          <span id="commentButton" class="fa-regular fa-comment" onclick="showCommentModal(this)"></span>
+          <!-- Comment count -->
+          <span id="commentCount"></span>
+          <!-- "Save for later" button -->
+          <span id="saveButton" class="fa-regular fa-bookmark" onclick="markSavedItem(this)"></span>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" src="https://baku-magazine.com/wp-content/uploads/2018/10/9783961711239_7-e1539265502171.jpg" alt="Penguin swimming">
+        <div class="card-body">
+          <h5 class="card-title">Paul Nicklen</h5>
+          <p class="card-text">Not only known for his excellent wildlife photography, but Paul Nicklen is also often referred to for his filmmaking abilities and for being a marine biologist.
+          He is also a regular contributor to National Geographic. 
+          Nicklen also owns a gallery in SoHo, New York City, where it serves as a space for conservationist photographers to showcase their art.</p>
+          <p class="card-text"><small class="text-muted">Penguin swimming</small></p>
+          </div>
+          <div data-id="paul" id="actionBar" style="text-align: left; background-color: #f0f0f0;">
+            <!-- "Like" button -->
+            <span id="likeButton" class="fa-regular fa-heart" onclick="likeItem(this)"></span>
+            <!-- "Comment" button -->
+            <span id="commentButton" class="fa-regular fa-comment" onclick="showCommentModal(this)"></span>
+            <!-- Comment count -->
+            <span id="commentCount"></span>
+            <!-- "Save for later" button -->
+            <span id="saveButton" class="fa-regular fa-bookmark" onclick="markSavedItem(this)"></span>
+          </div>
+      </div>
+  </div>
+  <br>
+  <div class="card-deck">
+      <div class="card">
+          <img class="card-img-top" src="https://yaffa-cdn.s3.amazonaws.com/yaffadsp/images/dmImage/StandardImage/vitale_a_human-nature_pandasgonewild01.jpg" alt="Panda bear in forest">
+          <div class="card-body">
+            <h5 class="card-title">Ami Vitale</h5>
+            <p class="card-text">Ami has traveled to over 100 countries during the course of her work and is a contracted photographer for National Geographic, which has published many of her images.
+            Her unique style and techniques have gained her a sizable following, and she continues to inspire many female photographers every year.</p>
+            <p class="card-text"><small class="text-muted">Panda bear in a forest</small></p>
+          </div>
+          <div data-id="ami" id="actionBar" style="text-align: left; background-color: #f0f0f0;">
+            <!-- "Like" button -->
+            <span id="likeButton" class="fa-regular fa-heart" onclick="likeItem(this)"></span>
+            <!-- "Comment" button -->
+            <span id="commentButton" class="fa-regular fa-comment" onclick="showCommentModal(this)"></span>
+            <!-- Comment count -->
+            <span id="commentCount"></span>
+            <!-- "Save for later" button -->
+            <span id="saveButton" class="fa-regular fa-bookmark" onclick="markSavedItem(this)"></span>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="https://www.joelsartore.com/wp-content/uploads/stock/ANI019/ANI019-00239.jpg" alt="Ocelot winking">
+          <div class="card-body">
+            <h5 class="card-title">Joel Sartore</h5>
+            <p class="card-text">Joel specializes in documenting endangered species and landscapes around the world. He is the founder of the Photo Ark, a 25-year documentary project to save species and habitat.</p>
+            <p class="card-text"><small class="text-muted">Ocelot winking</small></p>
+          </div>
+          <div data-id="joel" id="actionBar" style="text-align: left; background-color: #f0f0f0;">
+            <!-- "Like" button -->
+            <span id="likeButton" class="fa-regular fa-heart" onclick="likeItem(this)"></span>
+            <!-- "Comment" button -->
+            <span id="commentButton" class="fa-regular fa-comment" onclick="showCommentModal(this)"></span>
+            <!-- Comment count -->
+            <span id="commentCount"></span>
+            <!-- "Save for later" button -->
+            <span id="saveButton" class="fa-regular fa-bookmark" onclick="markSavedItem(this)"></span>
+          </div>
+        </div>
+    </div>
+    <footer style="text-align: center; color: white;">
+      Author: Paula Huhu @ 2023
+    </footer>
+  </div>
+    <script src="photographers.js"></script>
+</body>

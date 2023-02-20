@@ -1,0 +1,186 @@
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+body {
+    background-color: black;
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} 
+.main {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.image {
+    width: 100%; 
+    height: 40%;
+}
+#overlay {
+    margin-top: 2%;;
+    color: white; 
+    font-weight: bold;
+    font-family: "Times New Roman", serif, Verdana, "Times New Roman", Tahoma;
+    font-size: 3.5em;
+    text-align: center;
+}
+figcaption {
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+}
+#para1, #para2 {
+    margin-top:10%;
+    margin-bottom: 10%;
+    color: white; 
+    font-weight: bold;
+    font-family: "Times New Roman", serif, Verdana, "Times New Roman", Tahoma;
+    font-size: 2.5em;
+    text-align: center;
+}
+.carousel {
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: center;
+}
+  
+.slides {
+    width: 100%;
+    display: flex;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.slides::-webkit-scrollbar {
+    display: none;
+}
+
+.slides-item {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    font-size: 100px;
+    height: 600px;
+    justify-content: center;
+    margin: 0 1rem;
+    position: relative;
+    scroll-snap-align: start;
+    transform: scale(1);
+    transform-origin: center center;
+    transition: transform .5s;
+    width: 100%;
+}
+
+.carousel__nav {
+    padding: 1.25rem .5rem;
+}
+
+.slider-nav {
+    align-items: center;
+    background-color: #ddd;
+    border-radius: 50%;
+    color: black;
+    font-size: medium;
+    display: inline-flex;
+    justify-content: center;
+    padding: 1rem;
+    position: relative;
+    text-decoration: none;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.slider-nav:hover, .slider-nav:active {
+    background-color: black;
+    color: white;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap:20px;
+    padding: 10px;
+}
+.grid-item {
+    grid-gap:20px;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+#caption1, #caption2 {
+    font-size: 15px;
+    position: relative;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+}
+#winners {
+    color: white;
+}
+.submit-button {
+    color: aquamarine;
+}
+.submit-button:hover {
+    background-color: aquamarine;
+    color: black;
+}
+
+h5 {
+    text-align: center;
+    color: white;
+}
+.collapsible {
+    background-color: #333;
+    color: white;
+    font-family: Arial,  Times, Georgia;
+    padding: 18px;
+    width: 50%;
+    border: 1.5px solid gray;
+    border-radius: 3px;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    margin-left: 30%;
+    margin-right: 30%;
+    width: 40%;
+    text-align: center;
+}
+.active .collapsible:hover {
+    background-color: rgb(150, 144, 144); 
+}
+.content {
+    padding: 1vw;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    margin-left: 30%;
+    margin-right: 30%;
+    width: 40%;
+    text-align: justify;
+}
+#email {
+    margin-left: 30%;
+    margin-right: 30%;
+    width: 40%;
+}
+.navbar {
+    background-color: #333 !important;
+}
+.nav-item a:visited, .nav-item a:link, .nav-item a:active{
+    color: white !important; 
+}
+.nav-item a:hover {
+    color: aquamarine !important;
+}
+.nav-item.active a{
+    color:aquamarine !important;
+}
+.navbar-light .navbar-toggler {
+    border-color: black;
+}

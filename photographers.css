@@ -1,0 +1,85 @@
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+body {
+    background-color: black;
+}
+h2 {
+    color: white;
+    font-family: "Times New Roman", serif, Verdana, "Times New Roman", Tahoma;
+    font-size: 3.5em;
+    text-align: center;
+    margin-bottom: 1em;
+}
+p {
+    text-align: justify;
+}
+.info {
+    color: white;
+    background-color: black;
+    white-space: normal;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: center;
+    margin-bottom: 2.4rem;
+}
+.navbar {
+    background-color: #333 !important;
+}
+.nav-item a:visited, .nav-item a:link, .nav-item a:active{
+    color: white !important; 
+}
+.nav-item a:hover {
+    color: aquamarine !important;
+}
+.nav-item.active a{
+    color: aquamarine !important;
+}
+.fa-heart {
+    margin-left: 20px;
+    font-size: large;
+    margin-top: 5px;
+}
+.fa-solid.fa-heart {
+    color: #C1121F
+}
+.fa-heart:hover {
+    color: #C1121F;
+}
+.fa-comment {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    font-size: large;
+}
+.fa-comment:hover {
+    color: #003049;
+}
+.fa-bookmark {
+    right: 20px;
+    position: absolute;
+    margin-top: 5px;
+    font-size: large;
+}
+.fa-solid.fa-bookmark {
+    color: #003049;
+}
+.fa-bookmark:hover {
+    color: #003049;
+}
+.navbar-light .navbar-toggler {
+    border-color: black;
+}
+.actionBar {
+    display: inline-block;
+    width: inherit;
+}
+textarea {
+    max-width: 100%;
+    width: 465px; /*sau 29rem*/
+    height: 150px;
+    box-sizing: border-box;
+}

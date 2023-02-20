@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Wildlife photography</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact us</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Wildlife Photography</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="photographers.html">Famous Photographers</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="bookmarks.html">Saved articles</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="center main">
+                    <img class="image" src="./images/underwater.jpg" alt="Underwater photography">
+                    <!-- Image caption -->
+                    <figcaption style="color:white; text-align: right;">
+                        Photograph: Nick Blake/Underwater
+                    </figcaption>
+                    <!-- Title on top of image -->
+                    <div id="overlay" class="centered">The best of the wildlife photography</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="para1">
+        <!-- Subtitle -->
+        <p>Explore the underwater world</p>
+        <section class="carousel center" aria-label="carousel" Tabindex="0">
+            <!-- First carousel -->
+            <div class="slides">
+              <div class="slides-item slide-1" id="slide-1"><img src="./images/starfish.jpg" alt="Starfish"></div>
+              <div class="slides-item slide-2" id="slide-2"><img src="./images/Ancistrocheirus.JPG" alt="Squid"></div>
+              <div class="slides-item slide-3" id="slide-3"><img src="./images/jellyfish.jpg" alt="A jellyfish"></div>
+              <div class="slides-item slide-4" id="slide-4"><img src="./images/fish.JPG" alt="Fish in white corals"></div>
+              <div class="slides-item slide-5" id="slide-5"><img src="./images/turtle.JPG" alt="Sea turtle"></div>  
+            </div>
+            <!-- Second carousel -->
+            <div class="carousel__nav" style="margin-top:-5em">
+              <a class="slider-nav" href="#slide-1">1</a>
+              <a class="slider-nav" href="#slide-2">2</a>
+              <a class="slider-nav" href="#slide-3">3</a>
+              <a class="slider-nav" href="#slide-4">4</a>
+              <a class="slider-nav" href="#slide-5">5</a>
+            </div>
+        </section>
+        <br>
+        <br>
+        <!-- Subtitle -->
+        <p>Get lost in the woods</p>
+        <section class="carousel center" aria-label="carousel" Tabindex="0" style="margin-top:-3rem">
+            <div class="slides">
+                <div class="slides-item slide-1" id="slide-1.1"><img src="./images/wolf.jpg" alt="Eyes of a wolf"></div>
+                <div class="slides-item slide-2" id="slide-2.1"><img src="./images/Fox.jpg" alt="A fox in the forest"></div>
+                <div class="slides-item slide-3" id="slide-3.1"><img src="./images/woods_2.JPG" alt="A deer in a forest"></div>
+                <div class="slides-item slide-4" id="slide-4.1"><img src="./images/squirrel.jpg" alt="A squirrel"></div>
+                <div class="slides-item slide-5" id="slide-5.1"><img src="./images/woods.JPG" alt="An elk in a forest"></div>  
+            </div>
+            <div class="carousel__nav" style="margin-top:-5em">
+                <a class="slider-nav" href="#slide-1.1">1</a>
+                <a class="slider-nav" href="#slide-2.1">2</a>
+                <a class="slider-nav" href="#slide-3.1">3</a>
+                <a class="slider-nav" href="#slide-4.1">4</a>
+                <a class="slider-nav" href="#slide-5.1">5</a>
+            </div>
+        </section>
+        <!-- External link to winners -->
+        <div class="container" style="margin-top:10%">
+            <h3 id="winners">Wildlife Photographer of the Year 2022 -<a href="https://www.discoverwildlife.com/photo-galleries/wildlife-photographer-of-the-year-2022-winners/"  target="_blank" style="color:aquamarine"> See The Winners</a></h3>
+            <div class="row">
+                <div class="col-lg-6 mb-2 mb-lg-0">
+                    <img src="./images/rsz_3bees.jpg" alt="Cactus bees">
+                    <h4 id="caption1">
+                        Top prize - The big buzz by Karine Aigner
+                    </h4>
+                </div>
+                <div class="col-lg-6 ">
+                    <img src="./images/rsz_2puff_perfect.jpg" alt="A bird">
+                    <h4 id="caption2">
+                        Puff perfect by José Juan Hernández Martinez
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section>
+        <!-- Subtitle -->
+        <h5>Check out some wildlife photography tips from experts:</h5>
+        <br>
+        <!-- Dropdown list of tips -->
+        <button type="button" class="collapsible">1. Begin with a familiar environment &#8628</button>
+        <div class="content">
+            <p>Capturing a beautiful photograph doesn't necessarily mean journeying far from home. Ugo Mellone, winner of the 2015 Invertebrates category, believes that capturing a shot to be proud of is within reach. </p>
+        </div>
+        <button type="button" class="collapsible">2. Be prepared to wait &#8628</button>
+        <div class="content">
+            <p>Wildlife photographers can go to great lengths to achieve a prize-winning shot. Some will wait for weeks in below-freezing temperatures or return to locations over the course of a lifetime to capture rare or fleeting phenomena.</p>
+        </div>
+        <button type="button" class="collapsible">3. Get to know your subject &#8628</button>
+        <div class="content">
+            <p>While some unique moments are captured in the natural world by luck, award-winning images are usually the result of the photographer's knowledge.
+                With animals, insight into their behaviour and reactions can lead you to the right place at the right time.</p>
+        </div>
+        <button type="button" class="collapsible">4. Try looking closer &#8628</button>
+        <div class="content">
+            <p>Four-time finalist Klaus Tamm: 'You can create great images with the most average of subjects. I tend to focus on tiny objects since I am fascinated by their fragility and complexity, which you only realise when you get close.'</p>
+        </div>
+        <button type="button" class="collapsible">5. Take lots of photos &#8628</button>
+        <div class="content">
+            <p>It can take hundreds or even thousands of photographs to produce a couple of good ones.
+                Photographer Imre Potyó's image of egg-laying mayflies, Light fandango, was taken on a dark bank of the Danube River in Hungary.
+                This photo earned him a place among the 2016 Invertebrates finalists.</p>
+        </div>
+        <button type="button" class="collapsible">6. Edit your way to better photography &#8628</button>
+        <div class="content">
+            <p>In wildlife photography, expect a large number of poor images. Animals are constantly moving. Photos that are poorly composed or out of focus should be deleted. Edit carefully and share only your best.</p>
+        </div>
+        <button type="button" class="collapsible">7. Photograph during the best light &#8628</button>
+        <div class="content">
+            <p>To capture saturated colors, photograph early in the morning and late in the afternoon. Don't avoid overcast days; cloudy conditions often produce better images than the harsh light of a sunny day. </p>
+        </div>
+        <button type="button" class="collapsible">8. Get close with a photo blind &#8628</button>
+        <div class="content">
+            <p>To peek into the private lives of animals, use a photo blind.
+                There are a wide variety of hunting blinds available that work great for wildlife photography.</p>
+        </div>
+        <button type="button" class="collapsible">9. Zoom in to wildlife &#8628</button>
+        <div class="content">
+            <p>Of course, for top-quality images, a DSLR camera is difficult to beat. But if expense and size are a factor, consider a point-and-shoot.
+                Both camera types can be purchased with a zoom lens.</p>
+        </div>
+
+        <!-- JavaScript for the dropdown list -->
+        <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+            content.style.display = "none";
+            } else {
+            content.style.display = "block";
+            }
+        });
+        }
+        </script>
+    </section>
+    <br>
+    <!-- Subscription -->
+    <div style="color:white; text-align: center;">
+        <h6 style="padding:8px; margin-top: 10%;">To get more into the wild life, subscribe to our newsletter</h6>
+        <div id="email" class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">@</span>
+            </div>
+            <input type="text" class="form-control" placeholder="Email address" aria-label="Email address" aria-describedby="basic-addon1">
+          </div>
+        <div style="padding-bottom: 10px">
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                <label class="custom-control-label" for="customRadioInline1">Weekly newsletter</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                <label class="custom-control-label" for="customRadioInline2">Monthly newsletter</label>
+            </div>
+        </div>
+    </div>
+    <!-- Submit button -->
+    <input type="submit" value="Submit" class="btn btn-outline-dark center submit-button">
+    <br>
+</body>
+</html>
