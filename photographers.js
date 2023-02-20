@@ -47,7 +47,7 @@ function addComment () {
     createCommentSection(currentCommentId);
     updateCommentCount();
     // empty the textarea after the comment is published
-    // document.getElementById('comment-text').value = "";
+    document.getElementById('comment-text').value = "";
 }
 
 function createCommentSection (comment) {
@@ -80,8 +80,10 @@ function updateCommentCount () {
         const commentCount = comments[article].length;
         const element = document.querySelector("[data-id=" + article + "]");
         const countSpan = element.querySelector("#commentCount");
+        const commentButton = element.querySelector("#commentButton");
         if (commentCount > 0) {
             countSpan.innerText = commentCount;
+            commentButton.classList.add("fa-solid");
         }
     }
 }
