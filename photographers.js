@@ -26,6 +26,7 @@ function likeItem (item) {
 }
 
 let comments = {};
+
 function loadComments () {
     comments = JSON.parse(localStorage.getItem('comments')) || {}; 
 }
@@ -74,6 +75,7 @@ function showCommentModal (comment) {
     $('#comment-modal').modal({});
 }
 
+// count the number of the comments 
 function updateCommentCount () {
     loadComments();
     for (article in comments) {
@@ -81,6 +83,7 @@ function updateCommentCount () {
         const element = document.querySelector("[data-id=" + article + "]");
         const countSpan = element.querySelector("#commentCount");
         const commentButton = element.querySelector("#commentButton");
+        // show the number only if at least 1 comment exists
         if (commentCount > 0) {
             countSpan.innerText = commentCount;
             commentButton.classList.add("fa-solid");

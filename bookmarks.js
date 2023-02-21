@@ -7,10 +7,15 @@ function loadBookmarks() {
 loadBookmarks();
 
 function showArticles() {
+    let shouldHidePlaceholder = false;
     for (let id in bookmarks) {
         if (bookmarks[id]) {
             $("[data-id=" + id + "]").show();
+            shouldHidePlaceholder = true;
         }
+    }
+    if (shouldHidePlaceholder) {
+        $("#placeholder").hide();
     }
 }
 showArticles();

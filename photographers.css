@@ -51,7 +51,6 @@ p {
 }
 .fa-comment {
     margin-left: 10px;
-    margin-right: 10px;
     margin-top: 5px;
     font-size: large;
 }
@@ -70,8 +69,9 @@ p {
 .fa-bookmark:hover {
     color: #003049;
 }
-.navbar-light .navbar-toggler {
-    border-color: black;
+.navbar-dark .navbar-toggler {
+    border-color: white;
+    /* background-color: white; */
 }
 .actionBar {
     display: inline-block;
