@@ -14,6 +14,7 @@ function loadLikes() {
 }
 loadLikes();
 
+// mark the liked item
 function likeItem (item) {
     let id = item.parentElement.getAttribute("data-id");
     item.classList.toggle("fa-solid");

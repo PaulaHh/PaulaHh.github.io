@@ -29,6 +29,6 @@
 .card-body {
     box-shadow: 5px 5px 20px 0px lightgrey;
 }
-.navbar-light .navbar-toggler {
-    border-color: black;
+.navbar-dark .navbar-toggler {
+    border-color: white;
 }

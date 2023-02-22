@@ -71,7 +71,6 @@ p {
 }
 .navbar-dark .navbar-toggler {
     border-color: white;
-    /* background-color: white; */
 }
 .actionBar {
     display: inline-block;
@@ -79,7 +78,7 @@ p {
 }
 textarea {
     max-width: 100%;
-    width: 465px; /*sau 29rem*/
+    width: 465px;
     height: 150px;
     box-sizing: border-box;
 }

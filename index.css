@@ -181,6 +181,6 @@ h5 {
 .nav-item.active a{
     color:aquamarine !important;
 }
-.navbar-light .navbar-toggler {
-    border-color: black;
+.navbar-dark .navbar-toggler {
+    border-color: white;
 }
