@@ -13,7 +13,7 @@
 </head>
 <body>
   <!-- Modal for comments -->
-  <div class="modal fade" id="comment-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal fade" id="comment-modal" tabindex="-1" role="dialog" aria-labelledby="comment-modal" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -34,7 +34,7 @@
     </div>
   </div>
   <!-- Modal for number of bookmarks -->
-  <div id="bookmark-modal" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div id="bookmark-modal" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="bookmark-modal" aria-hidden="true">
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
         <p style="text-align: center;" id="number-of-bookmarks"></p>
@@ -70,7 +70,7 @@
         <h2>Famous Wildlife Photographers</h2>
     </header>
     <!-- Table containing short intro -->
-    <section>
+    <main>
         <table class="info" style="text-indent: -1.5em;">
             <tr>
                 <td>The three basic elements of a great image: the right light, the right composition, and the right moment.</td>
@@ -82,7 +82,7 @@
                 <td>Let's dig into some astonishing work of art!</td>
             </tr>
         </table>
-    </section>
+      </main>
     <br>
     <div class="card-deck">
       <div class="card">
@@ -94,7 +94,7 @@
               <p class="card-text"><small class="text-muted">Cougar looking at camera</small></p>
         </div>
         <!-- Action bar -->
-        <div data-id="frans" id="actionBar" style="text-align: left; background-color: #f0f0f0;">
+        <div data-id="frans" id="actionBar1" style="text-align: left; background-color: #f0f0f0;">
           <!-- "Like" button -->
           <span id="likeButton" class="fa-regular fa-heart" onclick="likeItem(this)"></span>
           <!-- "Comment" button -->
@@ -114,7 +114,7 @@
           </p>
           <p class="card-text"><small class="text-muted">Family of cheetahs</small></p>
         </div>
-        <div data-id="marina" id="actionBar" style="text-align: left; background-color: #f0f0f0;">
+        <div data-id="marina" id="actionBar2" style="text-align: left; background-color: #f0f0f0;">
           <!-- "Like" button -->
           <span id="likeButton" class="fa-regular fa-heart" onclick="likeItem(this)"></span>
           <!-- "Comment" button -->
@@ -136,7 +136,7 @@
                 The photos remind us of how fragile the magnificence of wildlife can be, which is why the work earned him the Grand Title Wildlife Photographer of the Year award.</p>
               <p class="card-text"><small class="text-muted">Couple of snub-nosed monkeys</small></p>
           </div>
-          <div data-id="marsel" id="actionBar" style="text-align: left; background-color: #f0f0f0;">
+          <div data-id="marsel" id="actionBar3" style="text-align: left; background-color: #f0f0f0;">
             <!-- "Like" button -->
             <span id="likeButton" class="fa-regular fa-heart" onclick="likeItem(this)"></span>
             <!-- "Comment" button -->
@@ -155,7 +155,7 @@
           Suzi's unique ability to earn the trust of her subject leads to touching imagery.</p>
           <p class="card-text"><small class="text-muted">Bat-eared fox with its pups</small></p>
         </div>
-        <div data-id="suzi" id="actionBar" style="text-align: left; background-color: #f0f0f0;">
+        <div data-id="suzi" id="actionBar4" style="text-align: left; background-color: #f0f0f0;">
           <!-- "Like" button -->
           <span id="likeButton" class="fa-regular fa-heart" onclick="likeItem(this)"></span>
           <!-- "Comment" button -->
@@ -177,7 +177,7 @@
                 He is known known for his contributions to BBC Planet Earth II.</p>
                 <p class="card-text"><small class="text-muted">Caraca bird spreading its wings</small></p>
           </div>
-          <div data-id="sandesh" id="actionBar" style="text-align: left; background-color: #f0f0f0;">
+          <div data-id="sandesh" id="actionBar5" style="text-align: left; background-color: #f0f0f0;">
             <!-- "Like" button -->
             <span id="likeButton" class="fa-regular fa-heart" onclick="likeItem(this)"></span>
             <!-- "Comment" button -->
@@ -196,7 +196,7 @@
                 It is her mission to raise awareness and change minds about not only the extrinsic beauty of animals, but also their intrinsic worth.</p>
               <p class="card-text"><small class="text-muted">Sleeping american avocet</small></p> 
           </div>
-          <div data-id="melissa" id="actionBar" style="text-align: left; background-color: #f0f0f0;">
+          <div data-id="melissa" id="actionBar6" style="text-align: left; background-color: #f0f0f0;">
             <!-- "Like" button -->
             <span id="likeButton" class="fa-regular fa-heart" onclick="likeItem(this)"></span>
             <!-- "Comment" button -->
@@ -218,7 +218,7 @@
           Born in Hong Kong and based in Agoura Hills, CA, Tin Man has a PhD in Biomedical Engineering, specializing in image recovery. </p>
           <p class="card-text"><small class="text-muted">Owl at dawn</small></p>
         </div>
-        <div data-id="tin" id="actionBar" style="text-align: left; background-color: #f0f0f0;">
+        <div data-id="tin" id="actionBar7" style="text-align: left; background-color: #f0f0f0;">
           <!-- "Like" button -->
           <span id="likeButton" class="fa-regular fa-heart" onclick="likeItem(this)"></span>
           <!-- "Comment" button -->
@@ -238,7 +238,7 @@
           Nicklen also owns a gallery in SoHo, New York City, where it serves as a space for conservationist photographers to showcase their art.</p>
           <p class="card-text"><small class="text-muted">Penguin swimming</small></p>
           </div>
-          <div data-id="paul" id="actionBar" style="text-align: left; background-color: #f0f0f0;">
+          <div data-id="paul" id="actionBar8" style="text-align: left; background-color: #f0f0f0;">
             <!-- "Like" button -->
             <span id="likeButton" class="fa-regular fa-heart" onclick="likeItem(this)"></span>
             <!-- "Comment" button -->
@@ -260,7 +260,7 @@
             Her unique style and techniques have gained her a sizable following, and she continues to inspire many female photographers every year.</p>
             <p class="card-text"><small class="text-muted">Panda bear in a forest</small></p>
           </div>
-          <div data-id="ami" id="actionBar" style="text-align: left; background-color: #f0f0f0;">
+          <div data-id="ami" id="actionBar9" style="text-align: left; background-color: #f0f0f0;">
             <!-- "Like" button -->
             <span id="likeButton" class="fa-regular fa-heart" onclick="likeItem(this)"></span>
             <!-- "Comment" button -->
@@ -278,7 +278,7 @@
             <p class="card-text">Joel specializes in documenting endangered species and landscapes around the world. He is the founder of the Photo Ark, a 25-year documentary project to save species and habitat.</p>
             <p class="card-text"><small class="text-muted">Ocelot winking</small></p>
           </div>
-          <div data-id="joel" id="actionBar" style="text-align: left; background-color: #f0f0f0;">
+          <div data-id="joel" id="actionBar10" style="text-align: left; background-color: #f0f0f0;">
             <!-- "Like" button -->
             <span id="likeButton" class="fa-regular fa-heart" onclick="likeItem(this)"></span>
             <!-- "Comment" button -->
