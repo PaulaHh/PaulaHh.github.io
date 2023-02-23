@@ -7,7 +7,7 @@ function loadLikes() {
     for (let id in likes){
         if (likes[id]){
             const element= document.querySelector("[data-id=" + id + "]");
-            const likeButton = element.querySelector("#likeButton");
+            const likeButton = element.querySelector(".like-button");
             likeItem(likeButton);
         }
     }
@@ -82,8 +82,8 @@ function updateCommentCount () {
     for (article in comments) {
         const commentCount = comments[article].length;
         const element = document.querySelector("[data-id=" + article + "]");
-        const countSpan = element.querySelector("#commentCount");
-        const commentButton = element.querySelector("#commentButton");
+        const countSpan = element.querySelector(".comment-count");
+        const commentButton = element.querySelector(".comment-button");
         // show the number only if at least 1 comment exists
         if (commentCount > 0) {
             countSpan.innerText = commentCount;
@@ -100,7 +100,7 @@ function loadBookmarks() {
     for (let id in bookmarks){
         if (bookmarks[id]){
             const element= document.querySelector("[data-id=" + id + "]");
-            const saveButton = element.querySelector("#saveButton");
+            const saveButton = element.querySelector(".save-button");
             likeItem(saveButton);
         }
     }
