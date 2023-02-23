@@ -101,7 +101,7 @@ function loadBookmarks() {
         if (bookmarks[id]){
             const element= document.querySelector("[data-id=" + id + "]");
             const saveButton = element.querySelector(".save-button");
-            likeItem(saveButton);
+            saveButton.classList.add("fa-solid");
         }
     }
 }
