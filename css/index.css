@@ -43,64 +43,11 @@ figcaption {
     font-size: 2.5em;
     text-align: center;
 }
-.carousel {
+/* .carousel {
     margin: 0 auto;
     overflow: hidden;
     text-align: center;
-}
-  
-.slides {
-    width: 100%;
-    display: flex;
-    overflow-x: scroll;
-    scrollbar-width: none;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-}
-
-.slides::-webkit-scrollbar {
-    display: none;
-}
-
-.slides-item {
-    align-items: center;
-    display: flex;
-    flex-shrink: 0;
-    font-size: 100px;
-    height: 600px;
-    justify-content: center;
-    margin: 0 1rem;
-    position: relative;
-    scroll-snap-align: start;
-    transform: scale(1);
-    transform-origin: center center;
-    transition: transform .5s;
-    width: 100%;
-}
-
-.carousel__nav {
-    padding: 1.25rem .5rem;
-}
-
-.slider-nav {
-    align-items: center;
-    background-color: #ddd;
-    border-radius: 50%;
-    color: black;
-    font-size: medium;
-    display: inline-flex;
-    justify-content: center;
-    padding: 1rem;
-    position: relative;
-    text-decoration: none;
-    width: 1.5rem;
-    height: 1.5rem;
-}
-
-.slider-nav:hover, .slider-nav:active {
-    background-color: black;
-    color: white;
-}
+} */
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -119,9 +66,13 @@ figcaption {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: lighter;
+    color: white;
+    margin-top: 5%;
+    margin-bottom: 10%;
 }
 #winners {
     color: white;
+    text-align: center;
 }
 .submit-button {
     color: aquamarine;
@@ -183,4 +134,10 @@ h5 {
 }
 .navbar-dark .navbar-toggler {
     border-color: white;
+}
+
+.carousel-container {
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
 }
