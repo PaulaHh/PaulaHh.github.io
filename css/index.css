@@ -43,11 +43,6 @@ figcaption {
     font-size: 2.5em;
     text-align: center;
 }
-/* .carousel {
-    margin: 0 auto;
-    overflow: hidden;
-    text-align: center;
-} */
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -137,7 +132,8 @@ h5 {
 }
 
 .carousel-container {
-    margin-left: 10%;
-    margin-right: 10%;
-    width: 80%;
+    margin-left: 20%;
+    margin-right: 20%;
+    width: 60%;
+    border: #1a1a1a solid 1px;
 }
