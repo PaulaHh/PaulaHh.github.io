@@ -6,6 +6,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/index.css">
 </head>
@@ -33,13 +34,13 @@
         </div>
     </nav>
     <div class="container">
-        <div class="row">
+        <div class="row heading">
             <div class="col">
                 <div class="center main">
                     <figure>
-                        <img class="image" src="./images/underwater.jpg" alt="Underwater photography">
+                        <img class="main-image" src="./images/underwater.jpg" alt="Underwater photography">
                         <!-- Image caption -->
-                        <figcaption style="color:white; text-align: right;">
+                        <figcaption class="figcaption">
                             Photograph: Nick Blake/Underwater
                         </figcaption>
                         <!-- Title on top of image -->
@@ -53,7 +54,7 @@
     <div >
         <!-- Subtitle -->
         <p id="para1">Explore the underwater world</p>
-        <section class="carousel center" aria-label="carousel" Tabindex="0">
+        <section class="carousel center carousel1" aria-label="carousel" Tabindex="0">
             <!-- First carousel -->
             <div class="carousel-container">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -96,7 +97,7 @@
         <br>
         <!-- Subtitle -->
         <p id="para2">Get lost in the woods</p>
-        <section class="carousel center" aria-label="carousel" Tabindex="0" style="margin-top:-3rem">
+        <section class="carousel center" aria-label="carousel" Tabindex="0">
             <!-- Second carousel -->
             <div class="carousel-container">
                 <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
@@ -136,17 +137,17 @@
             </div>
         </section>
         <!-- External link to winners -->
-        <div class="container" style="margin-top:10%">
-            <h3 id="winners">Wildlife Photographer of the Year 2022 -<a href="https://www.discoverwildlife.com/photo-galleries/wildlife-photographer-of-the-year-2022-winners/"  target="_blank" style="color:aquamarine"> See The Winners</a></h3>
-            <div class="row">
-                <div class="col-lg-6 mb-2 mb-lg-0">
-                    <img src="./images/rsz_3bees.jpg" alt="Cactus bees">
+        <div class="winners container">
+            <h3 id="winners-subtitle">Wildlife Photographer of the Year 2022 -<a href="https://www.discoverwildlife.com/photo-galleries/wildlife-photographer-of-the-year-2022-winners/"  target="_blank" style="color:aquamarine"> See The Winners</a></h3>
+            <div class="row row1">
+                <div class="col-lg-6">
+                    <img src="./images/rsz_3bees.jpg" class="winners-images" alt="Cactus bees">
                     <h4 id="caption1">
                         Top prize - The big buzz by Karine Aigner
                     </h4>
                 </div>
-                <div class="col-lg-6 ">
-                    <img src="./images/rsz_2puff_perfect.jpg" alt="A bird">
+                <div class="col-lg-6">
+                    <img src="./images/rsz_2puff_perfect.jpg" class="winners-images" alt="A bird">
                     <h4 id="caption2">
                         Puff perfect by José Juan Hernández Martinez
                     </h4>
@@ -154,75 +155,158 @@
             </div>
         </div>
     </div>
-    <section>
+    <section class="all-tips">
         <!-- Subtitle -->
-        <h5>Check out some wildlife photography tips from experts:</h5>
+        <h5 class="tips-title">Check out some wildlife photography tips from experts :</h5>
         <br>
-        <!-- Dropdown list of tips -->
-        <button type="button" class="collapsible">1. Begin with a familiar environment &#8628;</button>
-        <div class="content">
-            <p>Capturing a beautiful photograph doesn't necessarily mean journeying far from home. Ugo Mellone, winner of the 2015 Invertebrates category, believes that capturing a shot to be proud of is within reach. </p>
-        </div>
-        <button type="button" class="collapsible">2. Be prepared to wait &#8628;</button>
-        <div class="content">
-            <p>Wildlife photographers can go to great lengths to achieve a prize-winning shot. Some will wait for weeks in below-freezing temperatures or return to locations over the course of a lifetime to capture rare or fleeting phenomena.</p>
-        </div>
-        <button type="button" class="collapsible">3. Get to know your subject &#8628;</button>
-        <div class="content">
-            <p>While some unique moments are captured in the natural world by luck, award-winning images are usually the result of the photographer's knowledge.
-                With animals, insight into their behaviour and reactions can lead you to the right place at the right time.</p>
-        </div>
-        <button type="button" class="collapsible">4. Try looking closer &#8628;</button>
-        <div class="content">
-            <p>Four-time finalist Klaus Tamm: 'You can create great images with the most average of subjects. I tend to focus on tiny objects since I am fascinated by their fragility and complexity, which you only realise when you get close.'</p>
-        </div>
-        <button type="button" class="collapsible">5. Take lots of photos &#8628;</button>
-        <div class="content">
-            <p>It can take hundreds or even thousands of photographs to produce a couple of good ones.
+        <div id="accordion" class="main-container">
+          <!-- tip 1 -->
+          <div class="tips card">
+            <div class="card-header tips-heading" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn btn-link buttons" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  1. Begin with a familiar environment &#8628;
+                </button>
+              </h5>
+            </div>
+        
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body tips-text">
+                Capturing a beautiful photograph doesn't necessarily mean journeying far from home. Ugo Mellone, winner of the 2015 invertebrates category, believes that capturing a shot to be proud of is within reach.
+              </div>
+            </div>
+          </div>
+          <!-- tip 2 -->
+          <div class="tips card">
+            <div class="card-header tips-heading" id="headingTwo">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed buttons" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  2. Be prepared to wait &#8628;
+                </button>
+              </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body tips-text">
+                Wildlife photographers can go to great lengths to achieve a prize-winning shot. Some will wait for weeks in below-freezing temperatures or return to locations over the course of a lifetime to capture rare or fleeting phenomena.
+              </div>
+            </div>
+          </div>
+          <!-- tip 3 -->
+          <div class="tips card">
+            <div class="card-header tips-heading" id="headingThree">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed buttons" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  3. Get to know your subject &#8628;
+                </button>
+              </h5>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+              <div class="card-body tips-text">
+                While some unique moments are captured in the natural world by luck, award-winning images are usually the result of the photographer's knowledge.
+                With animals, insight into their behaviour and reactions can lead you to the right place at the right time.
+              </div>
+            </div>
+          </div>
+          <!-- tip 4 -->
+          <div class="tips card">
+            <div class="card-header tips-heading" id="headingFour">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed buttons" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  4. Try looking closer &#8628;
+                </button>
+              </h5>
+            </div>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+              <div class="card-body tips-text">
+                Four-time finalist Klaus Tamm: 'You can create great images with the most average of subjects. I tend to focus on tiny objects since I am fascinated by their fragility and complexity, which you only realise when you get close.'
+              </div>
+            </div>
+          </div>
+          <!-- tip 5 -->
+          <div class="tips card">
+            <div class="card-header tips-heading" id="headingFive">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed buttons" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                  5. Take lots of photos &#8628;
+                </button>
+              </h5>
+            </div>
+            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+              <div class="card-body tips-text">
+                It can take hundreds or even thousands of photographs to produce a couple of good ones.
                 Photographer Imre Potyó's image of egg-laying mayflies, Light fandango, was taken on a dark bank of the Danube River in Hungary.
-                This photo earned him a place among the 2016 Invertebrates finalists.</p>
+                This photo earned him a place among the 2016 Invertebrates finalists.
+              </div>
+            </div>
+          </div>
+          <!-- tip 6 -->
+          <div class="tips card">
+            <div class="card-header tips-heading" id="headingSix">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed buttons" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                  6. Edit your way to better photography &#8628;
+                </button>
+              </h5>
+            </div>
+            <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+              <div class="card-body tips-text">
+                In wildlife photography, expect a large number of poor images. Animals are constantly moving. Photos that are poorly composed or out of focus should be deleted. Edit carefully and share only your best.
+              </div>
+            </div>
+          </div>
+          <!-- tip 7 -->
+          <div class="tips card">
+            <div class="card-header tips-heading" id="headingSeven">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed buttons" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                  7. Photograph during the best light &#8628;
+                </button>
+              </h5>
+            </div>
+            <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
+              <div class="card-body tips-text">
+                To capture saturated colors, photograph early in the morning and late in the afternoon. Don't avoid overcast days; cloudy conditions often produce better images than the harsh light of a sunny day.
+              </div>
+            </div>
+          </div>
+          <!-- tip 8 -->
+          <div class="tips card">
+            <div class="card-header tips-heading" id="headingEight">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed buttons" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                  8. Get close with a photo blind &#8628;
+                </button>
+              </h5>
+            </div>
+            <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
+              <div class="card-body tips-text">
+              To peek into the private lives of animals, use a photo blind.
+              There are a wide variety of hunting blinds available that work great for wildlife photography.
+              </div>
+            </div>
+          </div>
+          <!-- tip 9 -->
+          <div class="tips card">
+            <div class="card-header tips-heading" id="headingNine">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed buttons" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                  9. Zoom in to wildlife &#8628;
+                </button>
+              </h5>
+            </div>
+            <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordion">
+              <div class="card-body tips-text">
+                Of course, for top-quality images, a DSLR camera is difficult to beat. But if expense and size are a factor, consider a point-and-shoot.
+                Both camera types can be purchased with a zoom lens.
+              </div>
+            </div>
+          </div>
         </div>
-        <button type="button" class="collapsible">6. Edit your way to better photography &#8628;</button>
-        <div class="content">
-            <p>In wildlife photography, expect a large number of poor images. Animals are constantly moving. Photos that are poorly composed or out of focus should be deleted. Edit carefully and share only your best.</p>
-        </div>
-        <button type="button" class="collapsible">7. Photograph during the best light &#8628;</button>
-        <div class="content">
-            <p>To capture saturated colors, photograph early in the morning and late in the afternoon. Don't avoid overcast days; cloudy conditions often produce better images than the harsh light of a sunny day. </p>
-        </div>
-        <button type="button" class="collapsible">8. Get close with a photo blind &#8628;</button>
-        <div class="content">
-            <p>To peek into the private lives of animals, use a photo blind.
-                There are a wide variety of hunting blinds available that work great for wildlife photography.</p>
-        </div>
-        <button type="button" class="collapsible">9. Zoom in to wildlife &#8628;</button>
-        <div class="content">
-            <p>Of course, for top-quality images, a DSLR camera is difficult to beat. But if expense and size are a factor, consider a point-and-shoot.
-                Both camera types can be purchased with a zoom lens.</p>
-        </div>
-
-        <!-- JavaScript for the dropdown list -->
-        <script>
-        var coll = document.getElementsByClassName("collapsible");
-        var i;
-
-        for (i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var content = this.nextElementSibling;
-            if (content.style.display === "block") {
-            content.style.display = "none";
-            } else {
-            content.style.display = "block";
-            }
-        });
-        }
-        </script>
     </section>
     <br>
     <!-- Subscription -->
     <div style="color:white; text-align: center;">
-        <h6 style="padding:8px; margin-top: 10%;">To get more into the wild life, subscribe to our newsletter</h6>
+        <h6 class="subscription">To get more into the wild life, subscribe to our newsletter</h6>
         <div id="email" class="input-group mb-3">
             <div class="input-group-prepend">
               <span class="input-group-text" id="basic-addon1">@</span>
@@ -232,11 +316,11 @@
         <div style="padding-bottom: 10px">
             <div class="custom-control custom-radio custom-control-inline">
                 <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
-                <label class="custom-control-label" for="customRadioInline1">Weekly newsletter</label>
+                <label id="option1" class="custom-control-label" for="customRadioInline1">Weekly newsletter</label>
             </div>
             <div class="custom-control custom-radio custom-control-inline">
                 <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-                <label class="custom-control-label" for="customRadioInline2">Monthly newsletter</label>
+                <label id="option2" class="custom-control-label" for="customRadioInline2">Monthly newsletter</label>
             </div>
         </div>
     </div>

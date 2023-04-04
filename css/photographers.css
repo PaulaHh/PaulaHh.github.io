@@ -6,38 +6,39 @@
 body {
     background-color: black;
 }
-h2 {
-    color: white;
-    font-family: "Times New Roman", serif, Verdana, "Times New Roman", Tahoma;
-    font-size: 3.5em;
-    text-align: center;
-    margin-bottom: 1em;
-}
+
 p {
     text-align: justify;
 }
+
 .info {
     color: white;
-    background-color: black;
-    white-space: normal;
-    width: 70%;
-    margin-left: 15%;
-    margin-right: 15%;
-    text-align: center;
-    margin-bottom: 2.4rem;
+    width: 100%;
+    margin-top: 5%;
 }
+
+.text-content {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
 .navbar {
     background-color: #333 !important;
+    font-family: 'Montserrat', sans-serif;
 }
+
 .nav-item a:visited, .nav-item a:link, .nav-item a:active{
     color: white !important; 
 }
+
 .nav-item a:hover {
     color: aquamarine !important;
 }
+
 .nav-item.active a{
     color: aquamarine !important;
 }
+
 .fa-heart {
     margin-left: 20px;
     font-size: large;
@@ -81,4 +82,18 @@ textarea {
     width: 465px;
     height: 150px;
     box-sizing: border-box;
+}
+
+.main-container {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 2%;
+}
+
+.title {
+    margin-top: 20px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    text-align: center;
 }
